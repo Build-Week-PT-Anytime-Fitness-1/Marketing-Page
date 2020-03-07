@@ -1,9 +1,14 @@
 body{
     // border: 1px red solid;
     width: 95%;
-
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     @media @mobile{
         font-size: 16px;
+    }
+
+    @media @tablet{
+        margin-left: 5px;
     }
 .nav-bar{
     color: @main-font-color;
@@ -17,6 +22,7 @@ body{
     // border: red 3px solid;
     // align-content: flex-end;
     // justify-content: center;
+    margin-bottom: 15px;
     .nav-item{
         padding: 5px;
         margin-left: 5px;
@@ -37,6 +43,7 @@ body{
 h1{
     font-size: 44px;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .container{
@@ -46,19 +53,32 @@ h1{
         .flexRow(space-between, center);               
         // width: 100%;    
         flex-wrap: wrap;    
-
-        @media @mobile{
+        
+        @media @phone{
             .flexCol(space-between, center);
+            flex-wrap: nowrap;
         }
         h1{
             display: block;
+            @media @phone{
+                .centermargin();
+            }
+
+            margin-bottom: 20px;
         }
         p{
             width: 48%;
             line-height: 32px;
             // .centermargin();            
-            @media @mobile{
+            @media @phone{
                 display: block;
+                .centermargin();
+                width: 100%;
+                // font-size: smaller;
+            }
+
+            @media @tablet{
+                margin-left: 125px;
             }
         }
 
@@ -69,8 +89,11 @@ h1{
             padding: 5px;
             margin: 5px;
             
-            @media @mobile{
-                display: block;
+            @media @phone{
+               display: none;
+               align-self: baseline;
+               justify-self: space-around;
+               margin-left: 125px;
             }
           
         }
@@ -104,6 +127,10 @@ h1{
                     // margin: 30px;
                 }
             }
+
+            @media @mobile {
+
+            }
             
         }
 .instructor-container{
@@ -122,6 +149,9 @@ h1{
         height: auto;
         padding: 20px;        
         text-align: center;
+        @media @phone{
+            display: none;
+        }
     }
 }
 }
