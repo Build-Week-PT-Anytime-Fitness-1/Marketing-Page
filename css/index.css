@@ -437,7 +437,7 @@ body .container .client-container {
   align-content: center;
   flex-wrap: wrap;
 }
-@media max-width: 500px {
+@media only screen and (max-width:500px) {
   body .container .client-container {
     display: flex;
     flex-direction: column;
@@ -450,7 +450,7 @@ body .container .client-container h1 {
   display: block;
   margin-bottom: 20px;
 }
-@media max-width: 500px {
+@media only screen and (max-width:500px) {
   body .container .client-container h1 {
     margin-left: auto;
     margin-right: auto;
@@ -460,12 +460,12 @@ body .container .client-container p {
   width: 48%;
   line-height: 32px;
 }
-@media max-width: 500px {
+@media only screen and (max-width:500px) {
   body .container .client-container p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-size: smaller;
+    width: 100%;
   }
 }
 body .container .client-container .client-img {
@@ -475,10 +475,12 @@ body .container .client-container .client-img {
   padding: 5px;
   margin: 5px;
 }
-@media max-width: 500px {
+@media only screen and (max-width:500px) {
   body .container .client-container .client-img {
-    width: auto;
-    height: 200px;
+    display: none;
+    align-self: baseline;
+    justify-self: space-around;
+    margin-left: 125px;
   }
 }
 body .container .btn {
@@ -530,4 +532,9 @@ body .container .instructor-container .instructor-img {
   height: auto;
   padding: 20px;
   text-align: center;
+}
+@media only screen and (max-width:500px) {
+  body .container .instructor-container .instructor-img {
+    display: none;
+  }
 }

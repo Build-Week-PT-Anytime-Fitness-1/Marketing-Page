@@ -50,13 +50,13 @@ h1{
         // width: 100%;    
         flex-wrap: wrap;    
         
-        @media @mobile{
+        @media @phone{
             .flexCol(space-between, center);
             flex-wrap: nowrap;
         }
         h1{
             display: block;
-            @media @mobile{
+            @media @phone{
                 .centermargin();
             }
 
@@ -66,10 +66,11 @@ h1{
             width: 48%;
             line-height: 32px;
             // .centermargin();            
-            @media @mobile{
+            @media @phone{
                 display: block;
                 .centermargin();
-                font-size: smaller;
+                width: 100%;
+                // font-size: smaller;
             }
         }
 
@@ -80,9 +81,11 @@ h1{
             padding: 5px;
             margin: 5px;
             
-            @media @mobile{
-                width: auto;
-                height: 200px;
+            @media @phone{
+               display: none;
+               align-self: baseline;
+               justify-self: space-around;
+               margin-left: 125px;
             }
           
         }
@@ -138,6 +141,9 @@ h1{
         height: auto;
         padding: 20px;        
         text-align: center;
+        @media @phone{
+            display: none;
+        }
     }
 }
 }
