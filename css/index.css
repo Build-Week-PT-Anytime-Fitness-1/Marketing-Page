@@ -167,6 +167,10 @@ p {
   margin: 1px;
   padding: 1px;
 }
+.landing a {
+  text-decoration: none;
+  color: #F6F6F6;
+}
 .landing .nav-bar {
   color: #F6F6F6;
   display: flex;
@@ -298,6 +302,10 @@ p {
   background-color: #F6F6F6;
   color: #CA1F3D;
   cursor: pointer;
+}
+.landing .main-content .content .btn a {
+  text-decoration: none;
+  color: #F6F6F6;
 }
 @media max-width: 500px {
   .landing .main-content .content .btn {
